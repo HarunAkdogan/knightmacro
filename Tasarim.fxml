@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane prefHeight="550.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+	<children>
+		<ToggleButton fx:id="vana" mnemonicParsing="false" onAction="#basladur" prefHeight="25.0" prefWidth="115.0" text="Kapalı" />
+		<TabPane layoutY="24.0" prefHeight="550.0" prefWidth="350.0">
+			<tabs>
+				<Tab text="Basic">
+					<content>
+						<AnchorPane fx:id="pane" prefHeight="500.0" prefWidth="300.0">
+							<children>
+								<TextField fx:id="tf1" layoutX="229.0" layoutY="39.0" prefHeight="25.0" prefWidth="40.0" text="0" />
+								<TextField fx:id="tf2" layoutX="229.0" layoutY="64.0" prefHeight="25.0" prefWidth="40.0" text="0" />
+								<TextField fx:id="tf3" layoutX="229.0" layoutY="89.0" prefHeight="25.0" prefWidth="40.0" text="0" />
+								<TextField fx:id="tf4" layoutX="229.0" layoutY="114.0" prefHeight="25.0" prefWidth="40.0" text="0" />
+								<TextField fx:id="tf5" layoutX="229.0" layoutY="139.0" prefHeight="25.0" prefWidth="40.0" text="0" />
+								<TextField fx:id="tf6" layoutX="229.0" layoutY="164.0" prefHeight="25.0" prefWidth="40.0" text="0" />
+								<TextField fx:id="tf7" layoutX="229.0" layoutY="189.0" prefHeight="25.0" prefWidth="40.0" text="0" />
+								<TextField fx:id="tf8" layoutX="229.0" layoutY="214.0" prefHeight="25.0" prefWidth="40.0" text="0" />
+								<TextField fx:id="tf9" layoutX="229.0" layoutY="239.0" prefHeight="25.0" prefWidth="40.0" text="0" />
+								<TextField fx:id="tf0" layoutX="229.0" layoutY="264.0" prefHeight="25.0" prefWidth="40.0" text="0" />
+								<Label layoutX="194.0" layoutY="43.0" text="1*" />
+								<Label layoutX="194.0" layoutY="68.0" text="2*" />
+								<Label layoutX="194.0" layoutY="93.0" text="3*" />
+								<Label layoutX="194.0" layoutY="118.0" text="4" />
+								<Label layoutX="194.0" layoutY="143.0" text="5" />
+								<Label layoutX="194.0" layoutY="168.0" text="6" />
+								<Label layoutX="194.0" layoutY="193.0" text="7" />
+								<Label layoutX="194.0" layoutY="218.0" text="8" />
+								<Label layoutX="194.0" layoutY="243.0" text="9" />
+								<Label layoutX="194.0" layoutY="268.0" text="0" />
+								<TextField fx:id="tfZ" layoutX="69.0" layoutY="40.0" prefHeight="25.0" prefWidth="40.0" text="0" />
+								<Label layoutX="32.0" layoutY="44.0" text="z" />
+								<Label layoutX="25.0" layoutY="15.0" text="Tuş:" textFill="RED" />
+								<Label layoutX="74.0" layoutY="15.0" text="Sıklık:" textFill="RED" />
+								<Label layoutX="32.0" layoutY="69.0" text="r*" />
+								<TextField fx:id="tfR" layoutX="69.0" layoutY="65.0" prefHeight="25.0" prefWidth="40.0" text="0" />
+								<TextField fx:id="tfW" layoutX="69.0" layoutY="114.0" prefHeight="25.0" prefWidth="40.0" text="0" />
+								<Label layoutX="31.0" layoutY="118.0" text="w" />
+								<Label layoutX="234.0" layoutY="14.0" text="Sıklık:" textFill="RED" />
+								<Label layoutX="188.0" layoutY="14.0" text="Skill:" textFill="RED" />
+								<TextField fx:id="tfC" layoutX="69.0" layoutY="89.0" prefHeight="25.0" prefWidth="40.0" text="0" />
+								<Label layoutX="32.0" layoutY="93.0" text="c" />
+								<Label layoutX="21.0" layoutY="302.0" text="HP:" />
+								<TextField fx:id="tfHP" layoutX="51.0" layoutY="299.0" prefHeight="25.0" prefWidth="40.0" promptText="Tuş" text="9">
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect></TextField>
+								<Label layoutX="20.0" layoutY="367.0" text="MP:" />
+								<TextField fx:id="tfMP" layoutX="52.0" layoutY="364.0" prefHeight="25.0" prefWidth="40.0" promptText="Tuş" text="0">
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect></TextField>
+								<Button layoutX="184.0" layoutY="381.0" mnemonicParsing="false" onAction="#hpmpIptal" prefHeight="30.0" prefWidth="100.0" text="HP-MP Sıfırla" />
+								<CheckBox fx:id="cbHP" layoutX="19.0" layoutY="330.0" mnemonicParsing="false" onAction="#hpmpSec" text="HP Bar Seç (G)" />
+								<CheckBox fx:id="cbMP" layoutX="19.0" layoutY="392.0" mnemonicParsing="false" onAction="#hpmpSec" text="MP Bar Seç (G)" />
+								<Label layoutX="177.0" layoutY="316.0" prefHeight="17.0" prefWidth="146.0" text="HP Düşünce Oyunu Kapat:" />
+								<CheckBox fx:id="cbKapat" layoutX="176.0" layoutY="335.0" mnemonicParsing="false" onAction="#hpmpSec" text="Düşük HP Bar Seç (G)" />
+								<Label layoutX="285.0" layoutY="15.0" text="Spam:" textFill="RED" />
+								<CheckBox fx:id="cbSpam6" layoutX="291.0" layoutY="168.0" mnemonicParsing="false" onAction="#spamSaniye" />
+								<CheckBox fx:id="cbSpam7" layoutX="291.0" layoutY="193.0" mnemonicParsing="false" onAction="#spamSaniye" />
+								<CheckBox fx:id="cbSpam8" layoutX="291.0" layoutY="218.0" mnemonicParsing="false" onAction="#spamSaniye" />
+								<Label layoutX="153.0" layoutY="168.0" text="(wolf)" />
+								<Label layoutX="146.0" layoutY="193.0" text="(safety)" />
+								<Label layoutX="145.0" layoutY="218.0" text="(evade)" />
+								<TextField fx:id="tfS" layoutX="69.0" layoutY="139.0" prefHeight="25.0" prefWidth="40.0" text="0" />
+								<Label layoutX="32.0" layoutY="143.0" text="s" />
+
+							</children>
+							<cursor>
+								<Cursor fx:constant="DEFAULT" />
+							</cursor>
+
+						</AnchorPane>
+					</content>
+				</Tab>
+				<Tab text="Party Heal">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+							<children>
+								<Label layoutX="31.0" layoutY="113.0" prefHeight="17.0" prefWidth="38.0" text="Heal 1" />
+								<CheckBox fx:id="cbHeal" layoutX="30.0" layoutY="14.0" mnemonicParsing="false" onAction="#healAcKapat" text="Aktif" />
+								<TextField fx:id="tfHealtus" layoutX="30.0" layoutY="132.0" prefHeight="25.0" prefWidth="35.0">
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect></TextField>
+                        <CheckBox fx:id="cbPTHP" layoutX="30.0" layoutY="74.0" mnemonicParsing="false" onAction="#hpmpSec" prefHeight="17.0" prefWidth="115.0" text="HP'leri Bul (G)" />
+                        <ImageView fx:id="imPTHP" fitHeight="25.0" fitWidth="30.0" layoutX="153.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label layoutX="39.0" layoutY="242.0" prefHeight="17.0" prefWidth="73.0" text="AC / Undy" />
+                        <TextField fx:id="tfAC" layoutX="30.0" layoutY="261.0" prefHeight="25.0" prefWidth="35.0">
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                        </TextField>
+                        <TextField fx:id="tfUndy" layoutX="74.0" layoutY="261.0" prefHeight="25.0" prefWidth="35.0">
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                        </TextField>
+                        <Label layoutX="42.0" layoutY="297.0" prefHeight="17.0" prefWidth="61.0" text="Party Buff" />
+                        <TextField fx:id="tfPBuff1" layoutX="30.0" layoutY="316.0" prefHeight="25.0" prefWidth="35.0">
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                        </TextField>
+                        <CheckBox fx:id="cbPTHPKoor" layoutX="76.0" layoutY="136.0" mnemonicParsing="false" onAction="#hpmpSec" text="Düşük HP (G)" />
+                        <TextField fx:id="tfPBuff2" layoutX="72.0" layoutY="316.0" prefHeight="25.0" prefWidth="35.0">
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                        </TextField>
+                        <Label layoutX="131.0" layoutY="265.0" prefHeight="17.0" prefWidth="115.0" text="(Tek tek (603 saniye))" />
+                        <Label layoutX="133.0" layoutY="376.0" text="(3603 saniye)" />
+                        <Label layoutX="131.0" layoutY="319.0" prefHeight="17.0" prefWidth="115.0" text="(Toplu (603 saniye))" />
+                        <TextField fx:id="tfTS2" layoutX="48.0" layoutY="372.0" prefHeight="25.0" prefWidth="35.0">
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                        </TextField>
+                        <Label layoutX="32.0" layoutY="163.0" prefHeight="17.0" prefWidth="38.0" text="Heal 2" />
+                        <TextField fx:id="tfHealtus2" layoutX="30.0" layoutY="182.0" prefHeight="25.0" prefWidth="35.0">
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                        </TextField>
+                        <CheckBox fx:id="cbPTHPKoor2" layoutX="77.0" layoutY="186.0" mnemonicParsing="false" onAction="#hpmpSec" text="Yüksek HP (G)" />
+                        <CheckBox fx:id="cbHealVeOtur" layoutX="225.0" layoutY="136.0" mnemonicParsing="false" text="Otur" />
+                        <Label layoutX="57.0" layoutY="354.0" prefHeight="17.0" prefWidth="16.0" text="TS" />
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+				<Tab text="Mage Nova">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+							<children>
+								<TextField fx:id="tfMG1" layoutX="89.0" layoutY="86.0" prefHeight="25.0" prefWidth="50.0" text="1">
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect></TextField>
+								<TextField fx:id="tfMG2" layoutX="89.0" layoutY="126.0" prefHeight="25.0" prefWidth="50.0" text="2">
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect></TextField>
+								<TextField fx:id="tfSure" layoutX="89.0" layoutY="45.0" prefHeight="25.0" prefWidth="50.0" text="30.7" />
+								<Label layoutX="36.0" layoutY="49.0" text="Sıklık:" />
+								<Label layoutX="29.0" layoutY="90.0" text="1. Nova:" />
+								<Label layoutX="29.0" layoutY="130.0" text="2. Nova:" />
+								<CheckBox fx:id="cbNova2" layoutX="158.0" layoutY="130.0" mnemonicParsing="false" onAction="#ikinciAcKapat" />
+								<CheckBox fx:id="cbMG" layoutX="159.0" layoutY="49.0" mnemonicParsing="false" onAction="#hpmpSec" text="Koordinat Seç (G)" />
+								<CheckBox fx:id="cbMage" layoutX="30.0" layoutY="14.0" mnemonicParsing="false" onAction="#mageAcKapat" text="Aktif" />
+								<Label layoutX="25.0" layoutY="171.0" prefHeight="17.0" prefWidth="251.0" text="(1.  Nova'yı öne, 2. Nova'yı arkaya atıp oturur.)" textFill="RED" />
+								<CheckBox fx:id="cbOne" layoutX="188.0" layoutY="130.0" mnemonicParsing="false" text="Öne At" />
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+				<Tab text="Rogue">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+							<children>
+								<RadioButton fx:id="rdBasiliTut" layoutX="21.0" layoutY="100.0" mnemonicParsing="false" text="Basılı Tut" />
+								<RadioButton fx:id="rdAcKapat" layoutX="21.0" layoutY="76.0" mnemonicParsing="false" text="Aç Kapat" />
+								<Label layoutX="125.0" layoutY="23.0" text="3'lü 5'li :" />
+								<Label layoutX="195.0" layoutY="144.0" text="3'lü :" />
+								<Label layoutX="195.0" layoutY="168.0" text="5'li :" />
+								<TextField fx:id="tfUc" layoutX="236.0" layoutY="140.0" maxWidth="40.0" prefHeight="25.0" text="4">
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect></TextField>
+								<TextField fx:id="tfBes" layoutX="236.0" layoutY="164.0" maxWidth="40.0" prefHeight="25.0" text="5">
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect></TextField>
+								<RadioButton fx:id="rdFare" layoutX="155.0" layoutY="104.0" mnemonicParsing="false" text="Fare İle" />
+								<RadioButton fx:id="rdKlavye" layoutX="155.0" layoutY="80.0" mnemonicParsing="false" text="Klavye İle" />
+								<TextField fx:id="tfKlavye" layoutX="236.0" layoutY="76.0" maxWidth="40.0" prefHeight="25.0" text="Q">
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect></TextField>
+								<TextField fx:id="tfFare" layoutX="236.0" layoutY="100.0" maxWidth="40.0" prefHeight="25.0" text="2">
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect></TextField>
+								<RadioButton fx:id="rdS" layoutX="22.0" layoutY="164.0" mnemonicParsing="false" text="3+S+5+W" />
+								<RadioButton fx:id="rdW" layoutX="21.0" layoutY="140.0" mnemonicParsing="false" text="3+W+5+W" />
+								<CheckBox fx:id="cbUcBes" layoutX="22.0" layoutY="14.0" mnemonicParsing="false" onAction="#ucBesAcKapat" text="Aktif" />
+								<TextField fx:id="tfUcBesSiklik" layoutX="256.0" layoutY="19.0" prefHeight="25.0" prefWidth="40.0" text="1" />
+								<Label layoutX="210.0" layoutY="23.0" text="Sıklık :" />
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+				<Tab text="Combo">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+							<children>
+								<CheckBox fx:id="cbCombo" layoutX="25.0" layoutY="23.0" mnemonicParsing="false" onAction="#comboAcKapat" text="Aktif" />
+								<TextField fx:id="tfUcBesSiklik2" layoutX="61.0" layoutY="73.0" prefHeight="25.0" prefWidth="30.0" text="0.5" />
+								<Label layoutX="23.0" layoutY="77.0" text="Sıklık :" />
+								<RadioButton fx:id="rdBasiliTut2" layoutX="250.0" layoutY="66.0" mnemonicParsing="false" text="Basılı Tut" />
+								<RadioButton fx:id="rdAcKapat2" layoutX="250.0" layoutY="39.0" mnemonicParsing="false" text="Aç Kapat" />
+								<RadioButton fx:id="rdFare2" layoutX="123.0" layoutY="66.0" mnemonicParsing="false" text="Fare İle" />
+								<RadioButton fx:id="rdKlavye2" layoutX="123.0" layoutY="39.0" mnemonicParsing="false" text="Klavye İle" />
+								<TextField fx:id="tfKlavye2" layoutX="200.0" layoutY="32.0" maxWidth="30.0" prefHeight="20.0" text="Q">
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect></TextField>
+								<TextField fx:id="tfFare2" layoutX="200.0" layoutY="58.0" maxWidth="30.0" prefHeight="20.0" text="2">
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect></TextField>
+								<TextField fx:id="tfBas1" layoutX="34.0" layoutY="122.0" prefHeight="25.0" prefWidth="45.0" promptText="Bas" text="R">
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect></TextField>
+								<TextField fx:id="tfBekle1" layoutX="34.0" layoutY="158.0" prefHeight="25.0" prefWidth="45.0" promptText="Bekle" text="0.3" />
+								<TextField fx:id="tfBas2" layoutX="34.0" layoutY="191.0" prefHeight="25.0" prefWidth="45.0" promptText="Bas" text="R">
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect></TextField>
+								<TextField fx:id="tfBekle2" layoutX="34.0" layoutY="227.0" prefHeight="25.0" prefWidth="45.0" promptText="Bekle" text="0.5" />
+								<TextField fx:id="tfBas3" layoutX="34.0" layoutY="260.0" prefHeight="25.0" prefWidth="45.0" promptText="Bas" text="2">
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect></TextField>
+								<TextField fx:id="tfBekle3" layoutX="34.0" layoutY="296.0" prefHeight="25.0" prefWidth="45.0" promptText="Bekle" />
+								<TextField fx:id="tfBas4" layoutX="34.0" layoutY="332.0" prefHeight="25.0" prefWidth="45.0" promptText="Bas">
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect></TextField>
+								<TextField fx:id="tfBekle4" layoutX="34.0" layoutY="368.0" prefHeight="25.0" prefWidth="45.0" promptText="Bekle" />
+								<CheckBox fx:id="cbKutu" layoutX="116.0" layoutY="287.0" mnemonicParsing="false" onAction="#kutuAcKapat" text="Kutu Topla" />
+								<TextField fx:id="tfB1" layoutX="229.0" layoutY="401.0" prefHeight="25.0" prefWidth="35.0">
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect></TextField>
+								<TextField fx:id="tfB2" layoutX="118.0" layoutY="357.0" prefHeight="25.0" prefWidth="35.0">
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect></TextField>
+								<TextField fx:id="tfB3" layoutX="118.0" layoutY="383.0" prefHeight="25.0" prefWidth="35.0">
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect></TextField>
+								<TextField fx:id="tfB4" layoutX="118.0" layoutY="409.0" prefHeight="25.0" prefWidth="35.0">
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect></TextField>
+								<TextField fx:id="tfB5" layoutX="118.0" layoutY="435.0" prefHeight="25.0" prefWidth="35.0">
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect></TextField>
+								<TextField fx:id="tfBS2" layoutX="163.0" layoutY="357.0" prefHeight="25.0" prefWidth="35.0" />
+								<TextField fx:id="tfBS3" layoutX="163.0" layoutY="383.0" prefHeight="25.0" prefWidth="35.0" />
+								<TextField fx:id="tfBS4" layoutX="163.0" layoutY="409.0" prefHeight="25.0" prefWidth="35.0" />
+								<TextField fx:id="tfBS5" layoutX="163.0" layoutY="435.0" prefHeight="25.0" prefWidth="35.0" />
+								<Label layoutX="121.0" layoutY="331.0" text="Buff:" />
+								<Label layoutX="167.0" layoutY="331.0" text="Süre:" />
+                        <TextField fx:id="tfTS" layoutX="229.0" layoutY="432.0" prefHeight="25.0" prefWidth="35.0">
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect></TextField>
+                        <CheckBox fx:id="cbDaire" layoutX="116.0" layoutY="216.0" mnemonicParsing="false" text="Dairede Kal" />
+                        <CheckBox fx:id="cbKoor" layoutX="116.0" layoutY="241.0" mnemonicParsing="false" onAction="#hpmpSec" text="Koordinat Seç (G)" />
+                        <ImageView fx:id="imKoor" fitHeight="25.0" fitWidth="95.0" layoutX="234.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true" />
+                        <TextField fx:id="tfBas5" layoutX="34.0" layoutY="400.0" prefHeight="25.0" prefWidth="45.0" promptText="Bas">
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                        </TextField>
+                        <TextField fx:id="tfBekle5" layoutX="34.0" layoutY="436.0" prefHeight="25.0" prefWidth="45.0" promptText="Bekle" />
+                        <CheckBox fx:id="cbMob" layoutX="116.0" layoutY="135.0" mnemonicParsing="false" onAction="#hpmpSec" text="Mob Seç (G)" />
+                        <CheckBox fx:id="cbMobTanimla" layoutX="116.0" layoutY="112.0" mnemonicParsing="false" onAction="#mobAcKapat" text="Mob Tanımlama" />
+                        <ImageView fx:id="imMob" fitHeight="25.0" fitWidth="100.0" layoutX="246.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true" />
+                        <ChoiceBox fx:id="cbGen" layoutX="213.0" layoutY="130.0" maxHeight="15.0" prefHeight="15.0" prefWidth="25.0" />
+                        <CheckBox fx:id="cbGeriYuru" layoutX="116.0" layoutY="160.0" mnemonicParsing="false" text="Yanlışsa Geri Yürü" />
+                        <TextField fx:id="tfCap" layoutX="231.0" layoutY="212.0" prefHeight="25.0" prefWidth="35.0" text="10" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="3.0" layoutX="115.0" layoutY="271.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="3.0" layoutX="115.0" layoutY="196.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="3.0" layoutX="115.0" layoutY="315.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                        <Label layoutX="279.0" layoutY="405.0" text="Heal" />
+                        <Label layoutX="279.0" layoutY="436.0" text="TS" />
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+            <Tab text="Other">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <CheckBox fx:id="cbFT" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#eventAcKapat" text="FT Tıkla" />
+                        <Label layoutX="100.0" layoutY="14.0" text="(NPC'yi seç, içine gir, G'ye basıp başlat)" />
+                        <CheckBox fx:id="cbAlarm" layoutX="14.0" layoutY="47.0" mnemonicParsing="false" onAction="#alarmAcKapat" text="Alarm" />
+                        <TextField fx:id="tfAlarm" layoutX="101.0" layoutY="43.0" prefHeight="25.0" prefWidth="40.0" text="620" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+			</tabs>
+		</TabPane>
+	</children>
+</AnchorPane>
